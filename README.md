@@ -8,7 +8,7 @@ This is an example of implementing a smart Login Modal with Redux, reselect, Imm
 ####Install Node.js and then:
 
 ```sh
-$ git clone git://github.com/dorsha/login-modal-react-redux
+$ git clone https://github.com/dorsha/login-modal-react-redux
 $ cd login-modal-react-redux
 $ sudo npm install -g bower
 $ npm install
