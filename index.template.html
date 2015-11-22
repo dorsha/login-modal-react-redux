@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>{%=o.htmlWebpackPlugin.options.title %}</title>
+    <meta charset="utf-8">
+    <meta name="description" content="Login Modal implementation with ReactJS and Redux">
+    <meta name="keywords" content="react,redux,login,modal">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    {% for (var css in o.htmlWebpackPlugin.files.css) { %}
+    <link href="{%=o.htmlWebpackPlugin.files.css[css] %}" rel="stylesheet">
+    {% } %}
+  </head>
+  <body>
+    <div id="app"></div>
+    {% for (var chunk in o.htmlWebpackPlugin.files.chunks) { %}
+    <script type="text/javascript" src="{%=o.htmlWebpackPlugin.files.chunks[chunk].entry%}"></script>
+    {% } %}
+  </body>
+</html>

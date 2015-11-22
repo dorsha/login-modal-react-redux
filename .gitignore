@@ -1,0 +1,16 @@
+*.sw*
+*~
+build/
+dist/
+bin/
+node_modules/
+bower_components/
+vendor/
+.DS_Store
+
+*.pyc
+*.komodoproject
+
+.idea
+
+npm-debug.log

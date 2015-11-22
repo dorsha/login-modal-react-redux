@@ -1,0 +1,21 @@
+{
+  "name": "Login Modal implementation with ReactJS and Redux",
+  "description": "Login Modal implementation with ReactJS and Redux",
+  "main": "index.js",
+  "authors": [
+    "Doron Sharon (dorsha)"
+  ],
+  "license": "MIT",
+  "moduleType": [],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "semantic": "semantic-ui#~2.1.5"
+  }
+}
