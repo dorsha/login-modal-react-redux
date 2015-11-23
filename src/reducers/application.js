@@ -4,7 +4,8 @@ import createReducer from '../util/createReducer';
 
 export const initialState = Immutable.fromJS({
   loginRequired: false,
-  retriesQueue: []
+  retriesQueue: [],
+  archived: false
 });
 
 export const actionHandlers = {
@@ -15,6 +16,9 @@ export const actionHandlers = {
       newState = newState.update('retriesQueue', () => Immutable.List.of(request));
     }
     return newState;
+  },
+  [ActionTypes.archiveSucceeded]: (state, action) => {
+    return state.set('archived', true);
   }
 };
 
