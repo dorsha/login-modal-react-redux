@@ -1,6 +1,6 @@
 # Login Modal Implementation with ReactJS and Redux
 
-This is an example of implementing a smart Login Modal with Redux, reselect, ImmutableJS, ReactJS and more...
+This is an example of implementing a smart Login Modal with Redux, reselect, ImmutableJS, ReactJS, webpack and more...
 
 ***
 
