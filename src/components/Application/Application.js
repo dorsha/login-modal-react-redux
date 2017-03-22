@@ -1,8 +1,12 @@
 import './Application.less';
-import React from 'react';
+import React, { PropTypes, Component } from 'react';
 import { LoginModal } from '../index';
 
-export default class Application extends React.Component {
+export default class Application extends Component {
+
+  static propTypes = {
+    children: PropTypes.any
+  };
 
   render() {
     return (
@@ -16,6 +20,3 @@ export default class Application extends React.Component {
   }
 }
 
-Application.propTypes = {
-  children: React.PropTypes.any
-};

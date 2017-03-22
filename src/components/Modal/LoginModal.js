@@ -1,11 +1,16 @@
 import './LoginModal.less';
-import React from 'react';
+import React, { PropTypes, Component } from 'react';
 import { Login } from '../index';
 import { connect } from 'react-redux';
 import { loginRequiredSelector } from '../../selectors/application';
 import $ from 'jquery';
 
-export default class LoginModal extends React.Component {
+class LoginModal extends Component {
+
+  static propTypes = {
+    loginRequired: PropTypes.bool,
+    retriesQueue: PropTypes.object
+  };
 
   constructor(props) {
     super(props);
@@ -57,10 +62,5 @@ export default class LoginModal extends React.Component {
     );
   }
 }
-
-LoginModal.propTypes = {
-  loginRequired: React.PropTypes.bool,
-  retriesQueue: React.PropTypes.object
-};
 
 export default connect(loginRequiredSelector)(LoginModal);

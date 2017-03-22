@@ -1,4 +1,4 @@
-import 'babel-core/polyfill';
+import 'babel-polyfill';
 import $ from 'jquery';
 window.jQuery = $; // Assure it's available globally.
 require('semantic/dist/semantic.min.js');

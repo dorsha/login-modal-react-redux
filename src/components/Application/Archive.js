@@ -1,10 +1,15 @@
 import './Archive.less';
-import React from 'react';
+import React, { PropTypes, Component } from 'react';
 import { connect } from 'react-redux';
 import { archive } from '../../actions/application';
 import { archivedSelector } from '../../selectors/application';
 
-export default class Archive extends React.Component {
+class Archive extends Component {
+
+  static propTypes = {
+    dispatch: PropTypes.func,
+    archived: PropTypes.bool
+  };
 
   constructor(props) {
     super(props);
@@ -43,10 +48,5 @@ export default class Archive extends React.Component {
     );
   }
 }
-
-Archive.propTypes = {
-  dispatch: React.PropTypes.func,
-  archived: React.PropTypes.bool
-};
 
 export default connect(archivedSelector)(Archive);
