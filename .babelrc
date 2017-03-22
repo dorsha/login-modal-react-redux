@@ -1,11 +1,9 @@
 {
-  "stage": 0,
-  "optional": [ "runtime" ],
+  "presets": ["es2015", "react", "stage-0"],
   "env": {
     "development": {
-      "plugins": ["react-transform"],
-      "extra": {
-        "react-transform": {
+      "plugins": [
+        ["react-transform", {
           "transforms": [{
             "transform": "react-transform-hmr",
             "imports": ["react"],
@@ -14,10 +12,22 @@
             "transform": "react-transform-catch-errors",
             "imports": ["react", "redbox-react"]
           }]
-        }
-      }
+        }],
+        ["transform-decorators-legacy"],
+        ["transform-class-properties"]
+      ]
+    },
+    "production": {
+      "plugins": [
+        ["transform-decorators-legacy"],
+        ["transform-class-properties"]
+      ]
     },
     "test": {
+      "plugins": [
+        ["transform-decorators-legacy"],
+        ["transform-class-properties"]
+      ]
     }
   }
 }

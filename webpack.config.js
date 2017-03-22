@@ -55,8 +55,9 @@ module.exports = {
       },
       {
         test: /\.js$/,
-        loaders: ['babel'],
-        include: path.join(__dirname, 'src')
+        loaders: ['babel?compact=false&cacheDirectory'],
+        include: path.join(__dirname, 'src'),
+        exclude: /node_modules/
       },
       {
         test: /\.(jpe?g|png|gif|svg)$/i,

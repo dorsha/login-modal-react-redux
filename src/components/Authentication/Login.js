@@ -1,10 +1,17 @@
 import './Login.less';
-import React from 'react';
+import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 import classNames from 'classnames';
 import { login } from '../../actions/application';
 
-export default class Login extends React.Component {
+class Login extends Component {
+
+  static propTypes = {
+    location: PropTypes.object,
+    modalCallback: PropTypes.func,
+    dispatch: PropTypes.func,
+    history: PropTypes.object
+  };
 
   constructor(props) {
     super(props);
@@ -89,13 +96,6 @@ export default class Login extends React.Component {
     );
   }
 }
-
-Login.propTypes = {
-  location: React.PropTypes.object,
-  modalCallback: React.PropTypes.func,
-  dispatch: React.PropTypes.func,
-  history: React.PropTypes.object
-};
 
 export default connect()(Login);
 
